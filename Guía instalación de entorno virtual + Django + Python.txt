@@ -1,0 +1,52 @@
+1. Instalar Python
+
+2. Agregar las variables del entorno (C:\Python27\;C:\Python27\Scripts)
+
+3. Instalar entorno virtual: pip install virtualenv
+	Crear entorno virtual:	virtualenv <myproject>
+	Active su virtualenv: source venv/bin/activate
+	Crear un requisitos.txt de los paquetes instalados actualmente: pip freeze > requirements.txt
+	Eliminar el VirtualEnv: rm -r vnev/
+	Crear un nuevo VirtualEnv con el nombre correcto: virtualenv venv
+	Active New VirtualEnv: source venv/bin/activate
+	Instalar paquetes de los requisitos.txt: pip install -r requirements.txt
+
+4. Entrar por una terminal (como administrador) a la carpeta que contiene Django
+5. Instalar: python setup.py install 
+ 
+6. Para crear el proyecto: django-admin startproject nombre_proyecto
+
+7. Para crear aplicación principal dentro del proyecto (esto es porque en Django se crea un proyecto que puede tener dentro una o varias aplicaciones): 
+	python manage.py startapp nombre_app
+	
+8. Probar que el proyecto funciona, entrar por la terminal a la carpeta del proyecto y ejecutar el comando: 
+	python manage.py runserver.
+	
+9. Configurar el fichero seetings.py que se encuentra dentro de la carpeta del proyecto:
+
+10. Crear base de datos:
+	python manage.py migrate
+	
+11. Crear modelos en el archivo models.py
+
+12. Activar los modelos
+	python manage.py makemigrations
+
+13. Crear tablas en las BD
+	python manage.py sqlmigrate nombreApp numero de migracion
+	
+14. Registrar los modelos en admin.py(admin.register.nombre_modelo)
+
+15. Chequear si los modelos están correctos (python manage.py check)	
+
+16. Crear super usuario para el panel de administracion
+	python manage.py createsuperuser
+
+	
+	
+Adicionar origen remoto en Git
+	git remote add origin https://github.com/gzaldivars/nombre_repo.git
+Eliminar origen remoto en Git 
+	git remote rm origin
+Subir el repositorio local a Github
+	git push -u origin main
